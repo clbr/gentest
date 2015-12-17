@@ -150,6 +150,8 @@ int main() {
 	VDP_setEnable(1);
 	SYS_enableInts();
 
+	SND_startPlay_4PCM_ENV(music, sizeof(music), 0, 1);
+
 	while (1) {
 		VDP_waitVSync();
 
