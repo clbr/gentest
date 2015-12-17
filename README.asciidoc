@@ -1,0 +1,2 @@
+This is a larger-than-2mb test ROM that displays video issues on Genesis hw, yet works
+perfectly on emulators.
