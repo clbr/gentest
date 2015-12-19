@@ -94,11 +94,11 @@ boot/sega.o: boot/rom_head.bin
 
 %.bin: %.elf
 	$(OBJC) -O binary $< temp.bin
-	@dd if=temp.bin of=$@ bs=8K conv=sync status=noxfer 2>/dev/null
+	@dd if=temp.bin of=$@ bs=128K conv=sync status=noxfer 2>/dev/null
 	@rm -f temp.bin
 
 %.elf: $(OBJS) $(BOOT_RESOURCES)
-	$(CC) -o $@ $(LINKFLAGS) $(BOOT_RESOURCES) $(LDFLAGS) $(ARCHIVES) $(OBJS) $(LIBS)
+	$(CC) -o $@ $(LINKFLAGS) $(BOOT_RESOURCES) $(LDFLAGS) $(OBJS) $(LIBS) $(ARCHIVES)
 	$(STRIP) --strip-unneeded $@
 
 %.o80: %.s80
