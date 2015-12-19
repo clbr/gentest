@@ -129,6 +129,7 @@ int main() {
 	VDP_setScreenWidth256();
 	VDP_clearPlan(VDP_PLAN_A, 1);
 	VDP_clearPlan(VDP_PLAN_B, 1);
+	VDP_waitDMACompletion();
 
 	VDP_setPaletteColors(0, (u16 *) pal, 16);
 
