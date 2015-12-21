@@ -1,2 +1,4 @@
-This is a larger-than-2mb test ROM that displays video issues on Genesis hw, yet works
+This is a larger-than-2mb test ROM that displayed video issues on Genesis hw, yet worked
 perfectly on emulators.
+
+The issue was undocumented DMA side effects.
